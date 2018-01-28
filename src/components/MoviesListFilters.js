@@ -1,28 +1,26 @@
 import React from 'react'
-import { connect } from 'react-redux';
-import { searchMovieList } from '../actions/actions';
-const MoviesListFilters = (props) =>  (
+import {connect} from 'react-redux';
+import {searchMovieList} from '../actions/actions';
+import FaSearch from 'react-icons/lib/fa/search';
+import '../styles/moviesListFilters.css';
+
+const MoviesListFilters = (props) => (
+
+    <div className="filter__container">
+        <div className="filter__input">
+            <FaSearch/>
             <input
                 type="text"
-                // value={props.filters.text}
                 onChange={(e) => {
-                    props.dispatch(searchMovieList(e.target.value))
-                    console.log(e.target.value)
-                }}
-            />
-    );
+                props.dispatch(searchMovieList(e.target.value))
+            }}/>
 
-    // componentWillReceiveProps(nextProps) {
-    //     const {dispatch} = this.props;
-    //       if(nextProps.params.keyword && this.props.params.keyword !== nextProps.params.keyword) {
-    //           dispatch(searchMovieList(nextProps.params.keyword));
-    //        }
-    //  }
+        </div>
+    </div>
+);
 
 const mapStateToProps = (state) => {
-    return {
-        filters: state.filters
-    };
+    return {filters: state.visibilityFilter};
 };
 
 export default connect(mapStateToProps)(MoviesListFilters);

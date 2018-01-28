@@ -54,6 +54,7 @@ function requestMovies() {
     };
   }
 
+
   export function searchMovieList(keyword){
     let url = URL_SEARCH + keyword + API_KEY_ALT;
     return function(dispatch){

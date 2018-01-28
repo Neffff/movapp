@@ -1,0 +1,32 @@
+.filter__container {
+    display: flex;
+    justify-content: center;
+}
+
+.filter__input {
+    border: 1px solid white;
+    width: 600px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.filter__container svg {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+.filter__container input {
+    font-size: 20px;
+    color: white;
+    background-color: #141414;
+    width: calc(100% - 16px);
+    height: 100%;
+    border: none;
+    padding: 0 0 0 10px;
+}
+
+.filter__container input:focus {
+    outline: none;
+}

@@ -7,13 +7,11 @@ import {
   SEARCH_MOVIE_FAILURE
 } from '../actions/actions';
 
-
 const initialState = {
   isFetching: false,
   items:[],
   error: {}
 };
-
 
 
 export const moviesList = (state = initialState, action) => {
@@ -32,6 +30,8 @@ export const moviesList = (state = initialState, action) => {
     return state;
   }
 }
+
+
 export const getVisibleMovies = (movies, filter) => {
   switch (filter) {
       case 'SHOW_ALL':
