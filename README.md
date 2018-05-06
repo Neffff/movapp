@@ -38,6 +38,6 @@ npm run build
 * [Redux](https://github.com/reactjs/react-redux) - State container for JavaScript apps.
 
 
-## Authors
+## Author
 
 * **Szymon Niemiec**
